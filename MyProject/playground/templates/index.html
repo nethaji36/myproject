@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Playgrounds</h1>
+<div class="row">
+    {% for playground in playgrounds %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ playground.image_url }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ playground.name }}</h5>
+              <p class="card-text">${{ playground.price }}</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>    
+    {% endfor%}
+</div>
+{% endblock %}
